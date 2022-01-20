@@ -20,7 +20,15 @@ export class Calculator {
       throw new CalculatorDivisionByZeroError();
     }
 
-    return new Calculator(this.stack / value);
+    return new Calculator(this.stack % value);
+  }
+
+  mod(value: number): Calculator {
+    if (value === 0) {
+      throw new CalculatorDivisionByZeroError();
+    }
+
+    return new Calculator(this.stack % value);
   }
 }
 

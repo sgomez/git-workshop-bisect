@@ -24,11 +24,17 @@ test("mul", () => {
 test("div", () => {
   const result = new Calculator(2).div(3).stack;
 
-  expect(result).toBeCloseTo(0.666666666);
+  expect(result).toBeCloseTo(2);
 });
 
 test("div", () => {
   expect(() => new Calculator(2).div(0).stack).toThrow(
     CalculatorDivisionByZeroError
   );
+});
+
+test("mod", () => {
+  const result = new Calculator(2).div(3).stack;
+
+  expect(result).toBe(2);
 });

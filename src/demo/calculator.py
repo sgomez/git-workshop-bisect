@@ -28,7 +28,15 @@ class Calculator:
         if number == 0:
             raise CalculatorDivisionByZeroError
 
-        self.stack /= number
+        self.stack %= number
+
+        return self
+
+    def mod(self, number: float) -> "Calculator":
+        if number == 0:
+            raise CalculatorDivisionByZeroError
+
+        self.stack %= number
 
         return self
 

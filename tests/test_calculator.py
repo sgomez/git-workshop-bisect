@@ -26,3 +26,8 @@ class TestCalculator:
     def test_div(self):
         with pytest.raises(CalculatorDivisionByZeroError):
             Calculator(2).div(0)
+
+    def test_mod(self):
+        calculator = Calculator(2).mod(3)
+
+        assert calculator == 2
